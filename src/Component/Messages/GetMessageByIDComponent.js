@@ -4,7 +4,7 @@ const GetMessageByIDComponent = (props) => {
     const [messageData, setMessageData] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:8080/messages/" + props.messageID)
+        fetch("https://complete-messages-git-thousandemon-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/messages" + props.messageID)
             .then((resp) => resp.json())
             .then((json) => {
                 console.log(json);

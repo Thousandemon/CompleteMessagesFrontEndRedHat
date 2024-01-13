@@ -7,7 +7,7 @@ const MessageByID = () => {
     const [allIds, setAllIds] = useState();
 
     useEffect(() =>{
-        fetch("http://localhost:8080/messages")
+        fetch("https://complete-messages-git-thousandemon-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/messages")
             .then((resp)=>resp.json())
             .then((json) => {
                 let temp = json.map((m)=> 

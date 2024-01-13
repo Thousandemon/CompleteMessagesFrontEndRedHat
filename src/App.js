@@ -8,6 +8,7 @@ import ColorSwitcher from './Component/SwitchingColors/ColorSwitcher';
 import GitHubFetcher from './Component/DealingWithGit/GitHubFetcher';
 import GetMessageByIDComponent from './Component/Messages/GetMessageByIDComponent';
 import MessageByID from './Component/Messages/MessageByID';
+import GetAllMessages from './Component/Messages/GetAllMessages';
 
 function App() {
   let initialValue = 0;
@@ -30,7 +31,8 @@ function App() {
       <GitHubFetcher testName = "BackpackTrainer"/> */}
       {/* <GetMessageByIDComponent messageId = "2"/> */}
       {/* <GetMessageByIDComponent messageID="3"></GetMessageByIDComponent> */}
-      <MessageByID />
+      {/* <MessageByID /> */}
+      <GetAllMessages />
     </div>
   );   
 }

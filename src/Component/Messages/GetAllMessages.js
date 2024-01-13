@@ -4,7 +4,7 @@ const GetAllMessages = () => {
     const [messageData, setMessageData] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:8080/messages")
+        fetch("https://complete-messages-git-thousandemon-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/messages")
             .then((resp) => resp.json())
             .then((json) => {
                 setMessageData(() => json);
@@ -12,7 +12,7 @@ const GetAllMessages = () => {
     },[])
 
     function loadData()  {
-        return messageData.localeCompare((m) =>
+        return messageData.map((m) =>
         <div key={m.id} id={'id' + m.id}>
             <h5 key = {m.id}>Message ID: {m.id}</h5>
             <p key = {m.content}>Message: {m.content}</p>
@@ -22,7 +22,11 @@ const GetAllMessages = () => {
     }
     if(messageData) {
         return (
-            loadData()
+            <>
+                <div> Proof of Concept: </div>
+                {loadData()}
+            </>
+
         )
     } else {
         return (
